@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="author" content="SG MANAGEMENT INC"/>
+	<meta name="description" content="国内外でバーを中心とした飲食店を企画・開発するSGグループ / SGマネジメントHP。The SG Club, The Bellwood（東京）, Speak Low, Sober Company, The Odd Couple（上海）を運営。" >
+	<meta name="keywords" content="後閑信吾, Shingo Gokan, カクテル, バー, The SG Club" >
+	<meta property="og:title" content="SG Group - SG Management Inc." />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="国内外でバーを中心とした飲食店を企画・開発するSGグループ / SGマネジメントHP。The SG Club, The Bellwood（東京）, Speak Low, Sober Company, The Odd Couple（上海）を運営。" />
+	<meta property="og:url" content="http://sg-management.jp/" />
+	<meta property="og:site_name" content="SG Group - SG Management Inc." />
+	<meta property="og:image" content="/image/ogimg.jpg" />
+	<link href="/css/jquery.bxslider.css" rel="stylesheet" />
+	<link href="/css/style-lightbox.css" rel="stylesheet" />
+	<link href="/css/style.css?1200906" rel="stylesheet" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="canonical" href="http://sg-management.jp/" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon180.jpg">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?20191114">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?20191114">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="/js/jquery.bxslider.min.js"></script>
+	<script src="/js/jquery.cookie.js"></script>
+	<script src="/js/lightbox.js"></script>
+	<script type="text/javascript" src="/js/jquery.lazyload.min.js"></script>
+	<script type="text/javascript" src="/js/main.js?200805"></script>
+	<title>ページが見つかりません | SG Group - SG Management Inc.</title>
+	<meta name="robots" content="noindex" />
+</head>
+<body>
+	<div class="wrapper">
+	<header class="sg-pc otherfix otherfix clearfix">
+<div class="sg-head">
+<a class="sg-head-inner sg-logo-sub" href="/"><img src="/image/sg-logo-black.png?20191114" alt="SGグループ"></a>
+<div cllass="sg-head-inner clearfix">
+	<ul class="sg-menu clearfix">
+		<li class="sg-menu-child"><a href="/#about">ABOUT</a></li>
+		<li class="sg-menu-child"><a href="/#gokan">GOKAN</a></li>
+		<li class="sg-menu-child sg-hovermenu-pa">PROJECTS
+			<div class="sg-hovermenuchi"><ul>
+				<li><a href="/#speaklow">SPEAKLOW</a></li>
+				<li><a href="/#sober">SOBER</a></li>
+				<li><a href="/#sgclub">SGCLUB</a></li>
+				<li><a href="/#oddcouple">ODDCOUPLE</a></li>
+				<li><a href="/#bellwood">BELLWOOD</a></li>
+				<li><a href="/#sglow">SGLOW</a></li>
+			</ul></div>
+		</li>
+		<li class="sg-menu-child"><a href="/#news">NEWS</a></li>
+		<!--<li class="sg-menu-child"><span class="recruitbtn">RECRUIT</span></li>-->
+		<li class="sg-menu-child"><a href="/#info">COMPANY</a></li>
+		<li class="sg-menu-child"><a href="/#contact">CONTACT</a></li>
+	</ul>
+</div>
+</div>
+</header>
+<header class="sg-sp otherfix clearfix">
+	<div class="sg-head-inner">
+	<span class="sg-logo-sub"><img src="/image/sg-logo-black.png?20191114" alt="SGグループ"></span>
+	<span class="sg-menu-btn"><i class="fas fa-bars"></i></span>
+	</div>
+	<div class="sg-menu-popup">
+	<ul class="clearfix">
+		<li class="sg-menu-child"><a class="btn" href="/">TOP</a></li>
+		<li class="sg-menu-child"><a class="aboutbtn btn" href="/#about">ABOUT</a></li>
+		<li class="sg-menu-child"><a class="gokanbtn btn" href="/#gokan">GOKAN</a></li>
+		<li class="sg-menu-child"><a class="speaklowbtn btn" href="/#speaklow">SPEAKLOW</a></li>
+		<li class="sg-menu-child"><a class="soberbtn btn" href="/#sober">SOBER</a></li>
+		<li class="sg-menu-child"><a class="sgclubbtn btn" href="/#sgclub">SGCLUB</a></li>
+		<li class="sg-menu-child"><a class="oddcouplebtn btn" href="/#oddcouple">ODDCOUPLE</a></li>
+		<li class="sg-menu-child"><a class="bellwoodbtn btn" href="/#bellwood">BELLWOOD</a></li>
+		<li class="sg-menu-child"><a class="sglow btn" href="/otherfix otherfix #sglow">SGLOW</a></li>
+		<li class="sg-menu-child"><a class="newsbtn btn" href="/#news">NEWS</a></li>
+		<!--<li class="sg-menu-child"><span class="recruitbtn btn">RECRUIT</span></li>-->
+		<li class="sg-menu-child"><a class="infobtn btn" href="/#info">COMPANY</a></li>
+		<li class="sg-menu-child"><a class="contactbtn btn" href="/#contact">CONTACT</a></li>
+	</ul>
+	</div>
+</header>
+<style>
+.sg-pc.otherfix{display:block;}
+.sg-sp.otherfix{display:none;}
+@media screen and (max-width:850px){
+	.sg-pc.otherfix{display:none;}
+	.sg-sp.otherfix{display:block;}
+}
+</style>
+	<div id="contact" class="sg-block mail-form">
+	<div class="sg-inner sg-mb-40" style="min-height:100vh;">
+	<h2 class="sg-mb-20" style="margin-top:2em;">ページが見つかりません</h2>
+	<p style="font-size:10em;color: #ddd;">404</p>
+	<p class="sg-mb-40">お探しのページは移動、もしくは削除された可能性があります。</p>
+	<a class="sg-newsmore" href="/">TOP PAGE</a>
+	</div>
+	</div>
+	<footer>
+	SG MANAGEMENT INC.
+	</footer>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120934411-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120934411-1');
+</script>
+</body>
+</html>

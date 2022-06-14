@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Noto+Serif+JP:wght@300;500;700;900&family=Roboto:ital,wght@0,300;0,500;1,900&display=swap"
+        rel="stylesheet">
+    <link href="./fontawesome-free-6.0.0-web/css/all.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        /* outline: solid rgb(117, 255, 86); */
+        font-family: 'Noto Sans TC', sans-serif;
+        font-family: 'Noto Serif JP', serif;
+        font-family: 'Roboto', sans-serif;
+    }
+
+
+    .position-rela {
+        position: relative;
+    }
+
+    .shadow {
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(rgba(0, 0, 0, 0.866), rgba(0, 0, 0, 0));
+        position: absolute;
+        top: 0;
+    }
+
+    .shadow-2 {
+        width: 100%;
+        height: 25%;
+        background: linear-gradient(rgba(206, 39, 39, 0), #471A23);
+        position: absolute;
+        bottom: 0;
+    }
+
+    .shadow-3 {
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(rgba(206, 39, 39, 0), #000000c4);
+        position: absolute;
+        bottom: 24px;
+        border-radius: 10px;
+    }
+
+    .shadow-top {
+        box-shadow: 0px 0px 0px rgb(4, 2, 2), 0px -50px 40px #471A23;
+    }
+
+    .z-index-1 {
+        z-index: 1;
+    }
+
+    .d-f {
+        display: flex;
+    }
+
+    .f-w400 {
+        font-weight: 400;
+    }
+
+    .f-w-200 {
+        font-weight: 400;
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+
+    .bder-5 {
+        border-radius: 5px;
+        border: 1px solid rgba(151, 151, 151, 0.616);
+        height: 30px;
+    }
+
+    .bder-6 {
+        border-radius: 5px;
+        border: 1px solid rgba(151, 151, 151, 0.616);
+    }
+
+    .w-300 {
+        width: 300px;
+    }
+
+    .w-350 {
+        width: 350px;
+    }
+
+    .w-450 {
+        width: 450px;
+    }
+
+    .w-24{
+        width: 24%;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .w-100 {
+        width: 85%;
+    }
+
+    .hi-300 {
+        height: 250px;
+    }
+
+    .jty-sb {
+        justify-content: space-between;
+    }
+
+    .fixed-img {
+        height: 100vh;
+        background: url(./images-SG/sg_backimg-jpg.jpeg) center center / cover no-repeat;
+        background-attachment: fixed;
+    }
+
+    .bor-top {
+        border-top: 3px dotted rgb(206, 187, 138);
+    }
+
+    .bor-bod {
+        border-bottom: 3px dotted rgb(206, 187, 138);
+    }
+
+    .top-logo {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top-logo2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top-logo img {
+        width: 200px;
+    }
+
+    .nav-right-2{
+        display: none;
+    }
+
+
+    .nav-bar {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0%;
+        background-color: rgba(255, 255, 255, 0.626);
+        z-index: 1;
+    }
+
+    .navbar-right {
+        display: flex;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar-logo img {
+        width: 50px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 300;
+        padding-bottom: 40px;
+        letter-spacing: 4px;
+    }
+
+    .div-solid {
+        height: 1px;
+        background: linear-gradient(90deg, transparent 0%, #fff 50%, transparent 100%);
+        /* opacity: 0.5; */
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+        padding-bottom: 40px;
+        letter-spacing: 4px;
+    }
+
+    .about-p {
+        line-height: 2em;
+        padding: 15px 0;
+        font-size: 14px;
+        font-weight: 400;
+        color: rgb(93, 93, 93);
+        letter-spacing: 1px;
+    }
+
+    .text-blak {
+        color: #000;
+    }
+
+    .f-w-500 {
+        font-weight: 500;
+    }
+
+    .br-10 {
+        border-radius: 10px;
+    }
+
+    .br-5 {
+        border-radius: 5px;
+    }
+
+    .text-red {
+        color: rgb(225, 0, 0);
+    }
+
+    .text-white-we-400 {
+        color: white;
+        font-weight: 400;
+    }
+
+    .text-white {
+        color: white;
+    }
+
+    .text-gold {
+        color: rgb(205, 181, 135);
+    }
+
+    .color-ccc {
+        color: rgb(205, 205, 205);
+    }
+
+    .color-dart {
+        color: #2d1016;
+    }
+
+    .pd-o-40 {
+        padding: 50px 40px;
+    }
+
+    .padding-0-10 {
+        padding: 0 10px;
+    }
+
+    .pd-50-0 {
+        padding: 50px 5px;
+    }
+
+    .pd-80 {
+        padding: 80px 0;
+    }
+
+    .p-r {
+        padding-right: 5px;
+    }
+
+    .p-b {
+        padding-bottom: 50px;
+    }
+
+    .p-b-20 {
+        padding-bottom: 20px;
+    }
+
+    .p-t {
+        padding-top: 40px;
+    }
+
+    .p-t-1px {
+        padding-top: 1px;
+    }
+
+    .m-b-2px {
+        margin-bottom: 2px;
+    }
+
+    .m-t {
+        margin-top: 50px;
+    }
+
+    .m-t-80 {
+        margin-top: 80px;
+    }
+
+    .m-t-20 {
+        margin-top: -20px;
+    }
+
+    .pd_20 {
+        padding: 40px;
+    }
+
+    .row {
+        padding: 0 10px;
+    }
+
+    .text-cen {
+        text-align: center;
+    }
+
+    .bder-b-1px {
+        border-bottom: 1px solid rgba(68, 68, 68, 0.198);
+    }
+
+    .bder-r-1 {
+        border-right: 1px solid rgb(0, 0, 0);
+    }
+
+
+
+    .shingogokak {
+        background-color: rgb(239, 239, 239);
+
+    }
+
+    .shingogokak-img {
+        width: 100%;
+        padding: 20px 0;
+        position: relative;
+    }
+
+    .shingogokak-img img {
+        width: 100%;
+        /* position: absolute; */
+    }
+
+    .pd-40 {
+        padding: 40px 0;
+    }
+
+    .box-s-b {
+        box-shadow: 0px 50px 0px 0px black inset;
+    }
+
+    .fixed-img02 {
+
+        width: 100%;
+        height: 100vh;
+        background: url(./images-SG/sg-speaklow-02-jpg.jpg) center center / cover no-repeat;
+        background-attachment: fixed;
+        position: relative;
+
+    }
+
+    .speaklow {
+        width: 230px;
+        background-color: rgba(255, 255, 255, 0.749);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .redbg {
+        background-color: rgb(62, 0, 0);
+        border-top: 7px solid rgb(101, 0, 0);
+        border-bottom: 7px solid rgb(101, 0, 0);
+
+    }
+
+    .bt-1 {
+        height: 100%;
+        /* width: 100%; */
+        border-top: 7px solid #000;
+        border-bottom: 7px solid #000;
+    }
+
+    .wrap-img {
+        width: 100%;
+        padding: 50px 0;
+    }
+
+    .picture:hover{
+        filter: brightness(120%);
+    }
+    .picture-2:hover{
+        filter: brightness(120%);
+    }
+    .picture-2-2:hover{
+        filter: brightness(120%);
+    }
+    .picture-3:hover{
+        filter: brightness(120%);
+    }
+
+    .wrap-img-wro {
+        flex-wrap: wrap;
+        display: flex;
+        margin: 0 -4px;
+    }
+
+    .wrap-img-wro-2 {
+        margin: auto;
+        width: 90%;
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .picture {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 5px;
+        transition: .3s;
+    }
+
+    .picture-2 {
+        width: 48%;
+        margin: auto;
+        padding-bottom: 5px;
+        transition: .3s;
+
+    }
+
+    .picture-2-2 {
+        width: 48%;
+        margin: auto;
+        padding-top: 5px;
+        transition: .3s;
+
+    }
+
+    .picture-3 {
+        width: 100%;
+        margin: auto;
+        padding: 5px 0;
+        transition: .3s;
+
+    }
+
+    .picture img {
+        width: 100%;
+    }
+
+    .picture-2 img {
+        width: 100%;
+    }
+
+    .picture-2-2 img {
+        width: 100%;
+    }
+
+    .picture-3 img {
+        width: 100%;
+    }
+
+    .INFORMATION {
+        background-color: rgb(223, 211, 211);
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .INFORMATION-final {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        padding: 15px 0;
+        text-align: center;
+        border: 3px solid rgb(224, 204, 154);
+        border-radius: 20px 0 20px 0;
+    }
+
+    .facebook {
+        font-size: 50px;
+        color: rgb(8, 42, 144);
+        margin-right: 5px;
+    }
+
+    .location {
+        font-size: 50px;
+        color: rgb(205, 18, 124);
+        margin-right: 5px;
+    }
+
+    .ig {
+        font-size: 50px;
+        color: rgb(8, 42, 144);
+        margin-right: 5px;
+    }
+
+    .day {
+        font-size: 50px;
+        color: rgb(8, 42, 144);
+        margin-right: 5px;
+    }
+
+
+
+    .bluebg {
+        background-color: #0D1A30;
+        ;
+        /* position: relative; */
+        padding-top: 300px;
+    }
+
+    .bronbg {
+        background-color: rgb(65, 65, 65);
+    }
+
+    .bronbg-2 {
+        background-color: rgb(48, 48, 48);
+    }
+
+    .blackbg {
+        background-color: #000;
+    }
+
+    .bgc-dblue {
+        background-color: #0D1A30;
+        border: 4px solid #2b396f;
+    }
+
+    .dredbg {
+        background-color: #471A23;
+    }
+
+    .dredbg-infmtion {
+        background-color: #2d1016;
+    }
+
+    .tifgreenbg {
+        background-color: #386273;
+    }
+
+    .tifgreenbg-2 {
+        background-color: #548295;
+    }
+
+    .color-db {
+        color: #7588cf;
+    }
+
+    .yellowbg {
+        background-color: rgb(206, 187, 138);
+    }
+
+    .yellowbg-2 {
+        background-color: rgb(145, 132, 99);
+    }
+
+    .color-dred {
+        color: rgb(165, 0, 0);
+
+    }
+
+    .bgc-white {
+        background-color: rgba(255, 255, 255, 0.445);
+    }
+
+    .bgc-ccc {
+        background-color: rgba(238, 238, 238, 0.959);
+    }
+
+    .wrap-sober {
+        position: relative;
+        width: 220px;
+        margin: 0 auto;
+        padding-bottom: 300px;
+    }
+
+    .wrap-sober img {
+        width: 100%;
+    }
+
+    .logo-sober-O {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+    }
+
+    .fixed-img03 {
+
+        width: 100%;
+        height: 100vh;
+        background: url(./images-SG/sg-sgclub-jpg.jpeg) center center / cover no-repeat;
+        background-attachment: fixed;
+    }
+
+    .fixed-img04 {
+
+        width: 100%;
+        height: 100vh;
+        background: url(./images-SG/sg-oddcouple-jpg.jpeg) center center / cover no-repeat;
+        background-attachment: fixed;
+    }
+
+    .fixed-img05 {
+
+        width: 100%;
+        height: 100vh;
+        background: url(./images-SG/sg-bellwood-jpg.jpeg) center center / cover no-repeat;
+        background-attachment: fixed;
+    }
+
+    .fixed-img06 {
+
+        width: 100%;
+        height: 100vh;
+        background: url(./images-SG/sg-sglow-jpg.jpeg) center center / cover no-repeat;
+        background-attachment: fixed;
+    }
+
+    .fixed-img07 {
+
+        width: 100%;
+        height: 100vh;
+        background: url(./images-SG/sg-swrl-top-jpg.jpeg) center center / cover no-repeat;
+        background-attachment: fixed;
+    }
+
+    .bgflower {
+        background: url(./images-SG/bellwood-bg-gif.gif);
+
+    }
+
+    .news-bgimg {
+        background: #cfcfcf url(./images-SG/back_st-gif.gif);
+    }
+
+    .news {
+        background-color: rgb(253, 131, 74);
+        color: white;
+        padding: 3px;
+    }
+
+    .media {
+        background-color: rgb(41, 156, 250);
+        color: white;
+        padding: 3px;
+    }
+
+    .learnmore {
+        padding: 8px 10px 8px 10px;
+        background-color: rgba(253, 253, 253, 0.671);
+        border: #000;
+        transition: .3s;
+    }
+
+    .learnmore:hover {
+        background-color: rgb(255, 255, 255);
+        filter: brightness(120%);
+
+    }
+
+    .sent {
+        width: 50px;
+        padding: 10px;
+        color: rgb(251, 251, 251);
+        margin: auto;
+        font-size: 18px;
+        /* padding: 10px; */
+        border-radius: 4px;
+        background-color: rgb(92, 92, 92);
+        transition: .3s;
+    }
+
+    .sent:hover {
+        background-color: rgb(149, 149, 149);
+
+    }
+
+    .footer {
+        background-color: rgb(192, 192, 192);
+    }
+
+    .footer p {
+        font-size: 15px;
+        font-weight: 100;
+        /* background-color: rgb(105, 105, 105); */
+
+    }
+
+    .picture-div {
+        width: 88%;
+        /* padding: 0 -20px; */
+        margin: auto;
+    }
+
+a{
+    transition: .3s;
+}
+
+    a:hover{
+        filter: brightness(200%);
+    }
+
+
+    @media screen and (min-width: 850px) {
+        .row {
+            width: 85%;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+
+        }
+
+        .navbar-logo{
+            position: absolute;
+            left: 5%;
+        }
+
+        .navbar-left{
+            display: none;
+        }
+
+        .navbar-right{
+            position: absolute;
+            right: 0;
+            font-weight: 200;
+        }
+
+        .nav-right-2{
+            display: flex;
+            align-items: center;
+            padding-right: 20px;
+            
+        }
+        .nav-right-2 p{
+            padding: 0 15px;
+            font-size: 12px;
+            font-weight: 200;
+        }
+
+        .wrap-img {
+            display: flex;
+            width: 100%;
+            padding: 50px 0;
+
+        }
+
+        .picture {
+            float: left;
+            width: 32.66%;
+        }
+
+        .m-r-1{
+            margin-right: 1%;
+        }
+
+        h3 {
+            font-size: 40px;
+            font-weight: 300;
+        }
+
+        .about-p {
+            font-size: 18px;
+        }
+
+        .facebook,
+        .ig,
+        .location,
+        .day {
+            font-size: 90px;
+            padding: 5px;
+        }
+
+        .wrap-img-wro {
+            flex-wrap: nowrap;
+            margin: 0 -5px;
+        }
+
+        .picture-2 {
+            /* width: 24%; */
+            padding: 0 5px;
+
+        }
+
+        .picture-div {
+            display: flex;
+            width: 100%;
+        }
+
+        .wrap-img-wro-2 {
+            width: 100%;
+        }
+
+        .picture-3 {
+            width: 32.8%;
+        }
+
+        .picture-2-2 {
+            width: 24%;
+        }
+
+        .INFORMATION-final {
+            width: 500px;
+            height: 400px;
+        }
+
+        .COMPANY {
+            display: flex;
+        }
+
+        .COMPANY-left {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1px;
+        }
+
+        .COMPANY-right {
+            width: 60%;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .COMPANY-left-2 {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .COMPANY-right-2 {
+            width: 70%;
+        }
+
+        .top-logo2 img {
+            width: 500px;
+        }
+
+        .top-logo img {
+            width: 400px;
+        }
+
+        .text-ct {
+            text-align: left;
+        }
+    }
+</style>
+
+<body>
+    <section class="fixed-img">
+        <div class="top-logo">
+            <img src="./images-SG/sggroup-logo-white-png.png" alt="">
+        </div>
+    </section>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="navbar-left padding-0-10">三</div>
+            <div class="navbar-logo"><img src="./images-SG/sg-logo-black-png.png" alt=""></div>
+            <div class="navbar-right">
+                <div class="nav-right-2">
+                    <p>ABOUT</p>
+                    <p>GOKAN</p>
+                    <p>PROJECTS</p>
+                    <p>NEWS</p>
+                    <p>COMPANY</p>
+                    <p>CONTACT</p>
+                </div>
+    
+                <p class="padding-0-10 bder-r-1 ">JP</p>
+                <p class="padding-0-10">EN</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="section">
+                <div class="pd-80">
+                    <h3>ABOUT</h3>
+                    <p class="about-p">SG
+                        Groupは国内外で新しいコンセプトのバーを企画・運営するバーカルチャーカンパニー。世界で数々の受賞歴を持つファウンダー後閑信吾のもと、コンペティションで実績あるバーテンダーが多数活躍しています。
+                    </p>
+                    <p class="about-p">私たちが共に大切にしているのは “Sip &
+                        Guzzle”。ゆっくり味わっても、カジュアルにも、誰もが自分の方法で楽しめる場。私たちはそんな空間としてのバーを日々育てています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container shingogokak">
+        <div class="row">
+            <div class="section ">
+                <div class="pd-40">
+                    <h3>SHINGO GOKAN</h3>
+                    <div class="shingogokak-img">
+                        <img src="./images-SG/sg-gokan-02-jpg.jpg" alt="">
+                    </div>
+                    <p class="about-p">SG Groupファウンダー。 今世界で最も注目されるバーテンダーの一人。</p>
+                    <p class="about-p">Bacardi Legacy Cocktail Competition 2012に米国代表として出場し、 国際大会優勝。 2017年、
+                        バー業界のアカデミー賞と言われるTales of the
+                        Cocktailの「International Bartender of the Year」を受賞。</p>
+                    <p class="about-p">Asia’s 50 Best Barsでは2019年に個人に対する最高賞「Altos Bartenders’
+                        Bartender」を、2021年にはその年のバー業界を象徴する人物に贈られる「Roku
+                        Industry Icon Award」を受賞し、双方を獲得した初めてのバーテンダーとなる。</p>
+                    <p class="about-p">バーインダストリーで最も影響力ある100人を選出する「Bar World
+                        100」の2021年版において、世界中のバー関係者の中からアジア、アメリカでトップとなる第4位に選出されている。
+
+                    </p class="about-p">
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="fixed-img02">
+        <div class="top-logo">
+            <img class="speaklow" src="./images-SG/sg-logo-speaklow-png.png" alt="">
+        </div>
+    </section>
+    <div class="container redbg">
+        <div class="bt-1">
+            <div class="row ">
+                <div class="section">
+                    <div class="pd-40">
+                        <h3> <span class="text-red">秘</span><span class="text-white-we-400">密の扉から始まる、特別な時間</span></h3>
+                        <p class="about-p"><span class="text-white"> 禁酒法時代のアメリカを思わせるスピークイージー（もぐり酒場）スタイルのバー、Speak
+                                Low。上海旧フランス租界の並木道に面する１階はバーツールのブティックショップ
+                                “OCHO”。店内の隠し扉を開けると、秘密の階段が来訪者を魅惑と喧騒の解放区へと招きます。</span>
+                        </p>
+                        <div class="wrap-img">
+                            <div class="picture m-r-1">
+                                <img src="./images-SG/sg-speaklow-01-jpg.jpg" alt="">
+                            </div>
+                            <div class="picture m-r-1">
+                                <img src="./images-SG/sg-speaklow-02-jpg.jpg" alt="">
+                            </div>
+                            <div class="picture">
+                                <img src="./images-SG/sg-speaklow-03-jpg.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="about-p text-white">
+                            アップビートな音楽が弾む２階は活気に溢れ、ニューヨーク・ダウンタウンのバーを思わせる雰囲気。銅板のカウンターではバーテンダーがテンポ良いサービスで大勢のゲストを楽しませます。</p>
+                        <p class="about-p text-white">
+                            洗練されたムードの３階は伝統と革新が共存するロンドン的スタイル。ジャパニーズウイスキーや少量生産のクラフトスピリッツを取り入れた、クリエイティビティ溢れるカクテルを満喫できます。
+
+                        </p>
+                        <p class="about-p text-white">The World’s 50 Best Bars 10位 (2017) / Asia’s 50 Best Bars 2位
+                            (2017)
+
+                        </p>
+                        <div class="wrap-img">
+                            <div class="picture m-r-1">
+                                <img src="./images-SG/sg-speaklow-06s-jpg.jpg" alt="">
+                            </div>
+                            <div class="picture m-r-1">
+                                <img src="./images-SG/sg-speaklow-07s-jpg.jpg" alt="">
+                            </div>
+                            <div class="picture">
+                                <img src="./images-SG/sg-speaklow-08s-jpg.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="INFORMATION ">
+                            <h3>
+                                INFORMATION
+                            </h3>
+                            <p class="about-p">
+                                <a class="facebook" href=""><i class="fa-brands fa-facebook-square"></i></a>
+                                <a class="location" href=""><i class="fa-solid fa-location-dot"></i></a>
+                            </p>
+                            <p class="about-p"><i class="fa-solid fa-phone-flip color-dred"></i> (+86) 02164160133</p>
+                            <p class="about-p"><i class="fa-solid fa-location-dot color-dred"></i>上海市复兴中路579号</p>
+                            <p class="about-p">579 Fuxing Middle Rd, Shanghai</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container bluebg p-b">
+        <div class="row">
+            <div class="wrap-sober">
+                <img class="logo-sober" src="./images-SG/sg-logo-sober-png.png" alt="">
+                <img class="logo-sober-O" src="./images-SG/sg-logo-sober-on-png.png" alt="">
+            </div>
+            <h3 class="text-white pd-o-40 f-w400">ニューヨークを旅するように <br>
+                多彩なカクテルカルチャーと出会える場所</h3>
+            <p class="about-p text-white">Sober Companyはカフェ(Cafe)、ダイニング(Kitchen)、バー(Society)
+                の３つの顔を持ち、それぞれのシーンでカクテルを楽しめる新しいコンセプトのレストランバー。</p>
+            <p class="about-p text-white">
+                各セクションはニューヨークのウエストヴィレッジ、チャイナタウン、イーストヴィレッジをテーマに異なる個性で彩られ、マンハッタンを旅するように多様性あふれるドリンクカルチャーを楽しめます。
+            </p>
+            <div class="wrap-img ">
+                <div class="picture m-r-1">
+                    <img class="br-10" src="./images-SG/sg-sober-01-jpg.jpg" alt="">
+                </div>
+                <div class="picture m-r-1">
+                    <img class="br-10" src="./images-SG/sg-sober-02-jpg.jpg" alt="">
+                </div>
+                <div class="picture">
+                    <img class="br-10" src="./images-SG/sg-sober-03-jpg.jpg" alt="">
+                </div>
+            </div>
+            <div class="shingogokak-img">
+                <img class="br-10" src="./images-SG/sg-sober-04-jpg.jpg" alt="">
+                <div class="shadow-3"></div>
+            </div>
+            <p class="about-p text-white">
+                バリスタが手がけるコーヒー＆ティーカクテルをアペリティフで楽しめる”Cafe”。モダンチャイニーズとカクテルのペアリングを味わう”Kitchen”。シックな雰囲気で食後の余韻の時間を楽しむ”Society”。３つを回ればSober（素面）のあなたもTipsy（ほろ酔い）に。
+            </p>
+            <p class="about-p text-white">The World’s 50 Best Bars 42位 (2020) / Asia’s 50 Best Bars 5位 (2021)
+
+                Tales of the Cocktail - Best International Restaurant Bar (2020)
+
+            </p>
+            <div class="wrap-img d-f jty-sb">
+                <div class="picture p-r">
+                    <img class="br-10" src="./images-SG/sg-sober-05s-jpg.jpg" alt="">
+                </div>
+                <div class="picture p-r">
+                    <img class="br-10 " src="./images-SG/sg-sober-06s-jpg.jpg" alt="">
+                </div>
+                <div class="picture p-r">
+                    <img class="br-10 " src="./images-SG/sg-sober-07s-jpg.jpg" alt="">
+                </div>
+                <div class="picture p-r">
+                    <img class="br-10 " src="./images-SG/sg-sober-08s-jpg.jpg" alt="">
+                </div>
+            </div>
+            <div class="INFORMATION br-10 bgc-dblue">
+                <h3 class="text-white">
+                    INFORMATION
+                </h3>
+                <p class="about-p">
+                    <a class="facebook color-db" href=""><i class="fa-brands fa-facebook-square "></i></a>
+                    <a class="ig color-db" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a class="location color-db" href=""><i class="fa-solid fa-location-dot"></i></a>
+                </p>
+                <p class="about-p text-white"><i class="fa-solid fa-phone-flip"></i> (+86) 02164160133</p>
+                <p class="about-p text-white"><i class="fa-solid fa-location-dot"></i>上海雁荡路99号</p>
+                <p class="about-p text-white">99 Yan Dang Lu, Shanghai</p>
+            </div>
+
+        </div>
+    </div>
+    <section class="fixed-img03">
+        <div class="top-logo">
+            <img class="" src="./images-SG/sg-logo-white-png.png" alt="">
+        </div>
+    </section>
+    <div class="container bronbg position-rela p-b">
+        <div class="shadow"></div>
+        <div class="row position-rela">
+            <h3 class="color-ccc pd-o-40 f-w400">バーを愉しめ <br>
+                A FINE PLACE TO SIP OR GUZZLE</h3>
+            <p class="about-p color-ccc">1860年に万延元年遣米使節として海を渡った侍たちと、カクテル黄金時代のアメリカ。彼らの旅からインスパイアされたThe SG
+                Clubは、和と洋が絶妙にブレンドされたカクテルバー。SipとGuzzleという対照的なスタイルで、自由で多様なカクテルカルチャーを表現します。
+            </p>
+            <div class="wrap-img ">
+                <div class="picture m-r-1">
+                    <img class="" src="./images-SG/sg-sgclub-07-jpg.jpg" alt="">
+                </div>
+                <div class="picture m-r-1">
+                    <img class="" src="./images-SG/sg-sgclub-02-jpg.jpg" alt="">
+                </div>
+                <div class="picture">
+                    <img class="" src="./images-SG/sg-sgclub-04-jpg.jpg" alt="">
+                </div>
+            </div>
+            <p class="about-p color-ccc">“気軽に飲む”
+                の意味を持つ１階Guzzleはカクテルをカジュアルに楽しむためのバー。ヴィンテージ感溢れる心地良い空間で、ノンアルコールのモクテルやテイクアウェイのカクテルメニューも充実。
+            </p>
+            <p class="about-p color-ccc">“ゆっくり味わう”
+                地下のSipは、当時のNYのギャングクラブを思わせる重厚さに和のモチーフがさりげなく織り込まれた空間。ファインダイニングで体験するような複雑なフレーバーのコンビネーションをカクテルで楽しめます。クラシックなシューシャインブースも併設。
+            </p>
+            <div class="shingogokak-img">
+                <img class="" src="./images-SG/sg-sgclub-06-jpg.jpg" alt="">
+            </div>
+            <p class="about-p color-ccc">
+                ２階のSavorはシガーとカクテルのペアリングを楽しめる会員制ラウンジ。吸い始め、中間、終わりで変化するシガーの味わいに合わせて仕立てられたカクテルメニュー。和とキューバの美学が溶け合う空間は、ここにしかない時間と体験を約束します。
+            </p>
+            <p class="about-p color-ccc">The World’s 50 Best Bars 10位 (2020) / Asia’s 50 Best Bars 3位 (2021) <br>
+                The Best Bar in Japan (2020, 2021)
+            </p>
+            <div class="shingogokak-img">
+                <img class="" src="./images-SG/sg-sgclub-08-jpg.jpg" alt="">
+            </div>
+            <div class="INFORMATION bronbg-2 m-t">
+                <h3 class="color-ccc">
+                    INFORMATION
+                </h3>
+                <p class="about-p">
+                    <a class="facebook " href=""><i class="fa-brands fa-facebook-square color-ccc"></i></a>
+                    <a class="ig " href=""><i class="fa-brands fa-instagram color-ccc"></i></a>
+                    <a class="location " href=""><i class="fa-solid fa-location-dot color-ccc"></i></a>
+                    <a class="day" href=""><i class="fa-solid fa-calendar-check color-ccc"></i></a>
+                </p>
+                <p class="about-p color-ccc"><i class="fa-solid fa-phone-flip"></i> (+81) 03-6427-0204</p>
+                <p class="about-p color-ccc"><i class="fa-solid fa-location-dot"></i>東京都渋谷区神南1-7-8</p>
+                <p class="about-p color-ccc">1-7-8 Jinan, Shibuya, Tokyo</p>
+            </div>
+
+        </div>
+    </div>
+    <section class="fixed-img04">
+        <div class="top-logo2">
+            <img class="w-300" src="./images-SG/sg-oddcouple-logo-png.png" alt="">
+        </div>
+    </section>
+    <div class="container blackbg p-b">
+        <div class="row">
+            <h3 class="text-white pd-50-0 f-w400">後閑信吾×スティーブ・シュナイダー
+                <br>
+                対照的なバーテンディングスタイルの共演
+            </h3>
+            <p class="about-p text-white">後閑信吾初のコラボレーションプロジェクト。
+
+                ニューヨークの名店「Employees Only」でプリンシパル・バーテンダーを務めてきたスティーブ・シュナイダーをパートナーに迎え、バーの新しい形を提案。
+                <br>
+                “The Odd Couple” – おかしな二人 – という店名が表すように、二人の対照的なバーテンディングスタイルを楽しめるスリリングなバー。
+            </p>
+            <div class="shingogokak-img m-t">
+                <img class="" src="./images-SG/sg-oddcouple-01-jpg.jpg" alt="">
+            </div>
+            <h3 class="text-white pd-50-0 f-w400">1980年代に想像した2018年のバー</h3>
+            <p class="about-p text-white">奇しくも同じ1983年生まれの二人がプロデュースするバーのコンセプトは、「1980年代に想像した未来、2018年のバー」。
+                <br>
+                80年代はトム・クルーズの「カクテル」が大ヒットし、カラフルで華やかなポップカルチャーが湧き上がった時代。そんな時代のバーテンダーが「バック・トゥ・ザ・フューチャー」さながら、一生懸命21世紀を想像して作ったバーにはネオンチューブや大画面のテレビゲームが光り、未来的でありながらどこか懐かしい雰囲気です。
+            </p>
+            <div class="wrap-img ">
+                <div class="picture m-r-1">
+                    <img class="" src="./images-SG/sg-oddcouple-03-jpg.jpg" alt="">
+                </div>
+                <div class="picture m-r-1">
+                    <img class="" src="./images-SG/sg-oddcouple-04-jpg.jpg" alt="">
+                </div>
+                <div class="picture">
+                    <img class="" src="./images-SG/sg-oddcouple-05-jpg.jpg" alt="">
+                </div>
+            </div>
+            <div class="INFORMATION blackbg m-t">
+                <h3 class="text-white">
+                    INFORMATION
+                </h3>
+                <p class="about-p">
+                    <a class="facebook" href=""><i class="fa-brands fa-facebook-square  text-white"></i></a>
+                    <a class="ig " href=""><i class="fa-brands fa-instagram text-white"></i></a>
+                    <a class="location" href=""><i class="fa-solid fa-location-dot text-white"></i></a>
+                </p>
+                <p class="about-p text-white"><i class="fa-solid fa-phone-flip text-white "></i> +86-(0)21-6333-2363</p>
+                <p class="about-p text-white"><i class="fa-solid fa-location-dot text-white"></i>上海 新天地北里25号</p>
+                <p class="about-p text-white">No.25, North Block, Xintiandi District, Shanghai</p>
+            </div>
+
+        </div>
+    </div>
+    <section class="fixed-img05 position-rela">
+        <div class="top-logo2">
+            <img class="w-350" src="./images-SG/bellwood-logo-png.png" alt="">
+        </div>
+        <div class="shadow-2"></div>
+    </section>
+    <div class="container position-rela ">
+        <div class="containe dredbg p-b ">
+            <div class="row ">
+                <h3 class="text-white pd-o-40 f-w400">100年前の東京<br>
+                    大正モダン華やかな時代の“カフェー”が<br>
+                    現代の渋谷に生まれ変わる</h3>
+                <div class="shingogokak-img">
+                    <img class="" src="./images-SG/sg-bellwood-02-jpg.jpg" alt="">
+                </div>
+                <p class="about-p text-white">
+                    100年前の東京。西洋文化が一般に浸透しはじめ、和洋折衷のスタイルが街中に現れはじめた頃。巷では“バーテンダー”や“コクテール(カクテル)”という言葉も出現しはじめた。</p>
+                <p class="about-p text-white">その新しい文化の中心を担ったのが「特殊喫茶(カフェー)」。『お酒と料理を楽しめるバー』であり、大正期の芸術家や文化人の社交場として花開いた。</p>
+                <p class="about-p text-white">The Bellwoodはその頃のカフェー文化を、カクテルバーとして現代の渋谷に表現しています。
+                </p>
+                <h3 class="text-white pd-o-40">鈴木敦プロデュース<br>
+                    “古き良きものの進化”を追求
+                </h3>
+                <p class="about-p text-white">The Bellwoodは、CHIVAS Mastersワールドチャンピオン
+                    鈴木敦によるプロデュース。“古き良きものの進化”というコンセプトが、メニューやインテリアの隅々にまで生かされています。</p>
+                <div class="shingogokak-img">
+                    <img class="" src="./images-SG/sg-bellwood-03-jpg.jpg" alt="">
+                </div>
+            </div>
+            <div class="container bgflower p-b m-t">
+                <div class="row">
+                    <p class="about-p text-white p-t">フロントバーでは鈴木敦が作り出す多彩なカクテルとともに、日本独特の”洋食”をアレンジしたフードを提供。</p>
+                    <div class="wrap-img-wro ">
+                        <div class="picture-2">
+                            <img class="br-10" src="./images-SG/bellwood-food-01s-jpg.jpg" alt="">
+                        </div>
+                        <div class="picture-2">
+                            <img class="br-10" src="./images-SG/bellwood-food-02s-jpg.jpg" alt="">
+                        </div>
+                        <div class="picture-2">
+                            <img class="br-10" src="./images-SG/bellwood-food-03s-jpg.jpg" alt="">
+                        </div>
+                        <div class="picture-2">
+                            <img class="br-10" src="./images-SG/bellwood-food-04s-jpg.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="wrap-img ">
+                    <div class="shingogokak-img">
+                        <img class="br-10" src="./images-SG/sg-bellwood-01-jpg.jpg" alt="">
+                        <div class="shadow-3"></div>
+                    </div>
+                </div>
+                <p class="about-p text-white p-b m-t-20">奥の小部屋にはカクテルペアリングを体験できる４席のみのバーを設え、１つの空間で２つの楽しみ方を演出しています。</p>
+                <div class="INFORMATION dredbg-infmtion m-t">
+                    <h3 class="text-gold">
+                        INFORMATION
+                    </h3>
+                    <p class="about-p">
+                        <a class="facebook" href=""><i class="fa-brands fa-facebook-square  text-gold"></i></a>
+                        <a class="ig " href=""><i class="fa-brands fa-instagram text-gold"></i></a>
+                        <a class="location" href=""><i class="fa-solid fa-location-dot text-gold"></i></a>
+                    </p>
+                    <p class="about-p text-gold"><i class="fa-solid fa-phone-flip text-gold "></i> +86-(0)21-6333-2363
+                    </p>
+                    <p class="about-p text-gold"><i class="fa-solid fa-location-dot text-gold"></i>上海 新天地北里25号</p>
+                    <p class="about-p text-gold">No.25, North Block, Xintiandi District, Shanghai</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <section class="fixed-img06">
+        <div class="top-logo2">
+            <img class="w-350" src="./images-SG/sg-logo-sglow-svg.svg" alt="">
+        </div>
+    </section>
+    <div class="container tifgreenbg p-t">
+        <div class="row">
+            <div class="div-solid "></div>
+            <h3 class="text-white p-t f-w400">IZAKAYA meets BAR <br>
+                イーストヴィレッジのビートが息づく<br>
+                バーテンダーが本気で遊んだ居酒屋</h3>
+            <p class="about-p text-white">
+                鯉の滝登りをイメージしたヒップポップな絵画とオブジェライトが迎える、NYイーストヴィレッジと渋谷をマッシュアップした空間。バーと呼んでも、居酒屋と呼んでもいい。お酒が美味しく、
+                料理が美味しく、会話が弾む。目指したのは遊び心溢れる自由な場所。</p>
+            <div class="shingogokak-img ">
+                <img class="" src="./images-SG/sg-sglow-01-jpg.jpg" alt="">
+            </div>
+            <div class="div-solid  m-t"></div>
+            <h3 class="text-white p-t">“COCKTAIL lZAKAYA”<br>
+                という愉しみ</h3>
+            <p class="about-p text-white">
+                カクテルのアイデアで生み出された10数種のレモンサワーやThe SG Shochuのハイボール。日本の居酒屋料理と世界の食材を組み合わせたバラエティ富むフード。定番メニューをSGらしいアレンジで提供します。
+            </p>
+            <div class="wrap-img-wro pd_20 tifgreenbg-2">
+                <div class="picture-2">
+                    <img class="" src="./images-SG/sg-sglow-02s-jpg.jpg" alt="">
+                </div>
+                <div class="picture-2">
+                    <img class="" src="./images-SG/sg-sglow-03s-jpg.jpg" alt="">
+                </div>
+                <div class="picture-2">
+                    <img class="" src="./images-SG/sg-sglow-04s-jpg.jpg" alt="">
+                </div>
+                <div class="picture-2">
+                    <img class="" src="./images-SG/sg-sglow-05s-jpg.jpg" alt="">
+                </div>
+            </div>
+            <div class="div-solid  m-t-80"></div>
+            <div class="INFORMATION tifgreenbg m-t">
+                <h3 class="text-white">
+                    INFORMATION
+                </h3>
+                <p class="about-p">
+                    <a class="facebook " href=""><i class="fa-brands fa-facebook-square color-ccc"></i></a>
+                    <a class="ig " href=""><i class="fa-brands fa-instagram color-ccc"></i></a>
+                    <a class="location " href=""><i class="fa-solid fa-location-dot color-ccc"></i></a>
+                    <a class="day" href=""><i class="fa-solid fa-calendar-check color-ccc"></i></a>
+                </p>
+                <p class="about-p text-white"><i class="fa-solid fa-phone-flip"></i>(+81)03-6416-0608</p>
+                <p class="about-p text-white"><i class="fa-solid fa-location-dot"></i> 東京都渋谷区神南1-9-4 NCビル2F</p>
+                <p class="about-p text-white">NC Building 2F, 1-9-4 Jinnan, Shibuya, Tokyo</p>
+            </div>
+
+        </div>
+    </div>
+    <section class="fixed-img07">
+        <div class="top-logo2">
+            <img class="w-400" src="./images-SG/swrl_logo_white_2-svg.svg" alt="">
+        </div>
+    </section>
+    <div class="container p-t yellowbg">
+        <div class="row">
+            <h4 class="pd-o-40 f-w400">バーテンダーとソムリエのコラボレーションが<br>
+                ワインカクテルの世界を一変させる
+            </h4>
+            <p class="about-p text-blak">
+                ワインテイスティングの「スワリング」に由来する「swrl.」は、今までのワインカクテルのアプローチを一新する、世界でも例を見ない新しいコンセプトのレストランバー。
+            </p>
+            <p class="about-p text-blak">
+                ＜カクテル＞と＜ワイン＞をペアリングのアイデアで合わせて生み出す一杯は、今まで経験したことのないフレーバーワールド。
+            </p>
+            <p class="about-p text-blak">
+                バーテンダー後閑信吾、国内外で活躍するトップソムリエ大越基裕氏、そして肉とヴィーガンのスペシャリストとして知られる米澤文雄シェフのコラボレーションが新しい体験を創造します。
+            </p>
+        </div>
+        <div class="container yellowbg-2  m-t">
+            <div class="row">
+                <div class="wrap-img ">
+                    <div class="bor-top bor-bod picture-div">
+                        <div class="picture-3 ">
+                            <img class="br-5" src="./images-SG/sg-swrl-main01-jpg.jpg" alt="">
+                        </div>
+                        <div class="picture-3">
+                            <img class="br-5" src="./images-SG/sg-swrl-main02-jpg.jpg" alt="">
+                        </div>
+                        <div class="picture-3 ">
+                            <img class="br-5" src="./images-SG/sg-swrl-main03-jpg.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h4 class="pd-o-40 ">バーテンダーとソムリエのコラボレーションが<br>
+                ワインカクテルの世界を一変させる
+            </h4>
+            <p class="about-p text-blak">
+                ワインテイスティングの「スワリング」に由来する「swrl.」は、今までのワインカクテルのアプローチを一新する、世界でも例を見ない新しいコンセプトのレストランバー。
+            </p>
+            <p class="about-p text-blak">
+                ＜カクテル＞と＜ワイン＞をペアリングのアイデアで合わせて生み出す一杯は、今まで経験したことのないフレーバーワールド。
+            </p>
+        </div>
+        <div class="container yellowbg-2  m-t">
+            <div class="row">
+                <div class="wrap-img-wro-2 p-t p-b">
+                    <div class="wrap-img-wro-2 bor-top bor-bod">
+                        <div class="picture-2-2 ">
+                            <img class="br-5" src="./images-SG/sg-swrl-menu01-s-jpg.jpg" alt="">
+                        </div>
+                        <div class="picture-2-2 ">
+                            <img class="br-5" src="./images-SG/sg-swrl-menu02-s-jpg.jpg" alt="">
+                        </div>
+                        <div class="picture-2-2 ">
+                            <img class="br-5" src="./images-SG/sg-swrl-menu03-s-jpg.jpg" alt="">
+                        </div>
+                        <div class="picture-2-2 ">
+                            <img class="br-5" src="./images-SG/sg-swrl-menu04-s-jpg.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container yellowbg  m-t p-b">
+            <div class="row">
+                <div class="INFORMATION-final yellowbg ">
+                    <h3>
+                        INFORMATION
+                    </h3>
+                    <p class="about-p">
+                        <a class="facebook" href=""><i class="fa-brands fa-facebook-square color-dart"></i></a>
+                        <a class="ig " href=""><i class="fa-brands fa-instagram color-dart"></i></a>
+                        <a class="location" href=""><i class="fa-solid fa-location-dot color-dart"></i></a>
+                        <a class="day" href=""><i class="fa-solid fa-calendar-check color-dart"></i></a>
+                    </p>
+                    <p class="about-p"><i class="fa-solid fa-phone-flip color-dart"></i> (+86) 02164160133</p>
+                    <p class="about-p"><i class="fa-solid fa-location-dot color-dart"></i>上海市复兴中路579号</p>
+                    <p class="about-p">579 Fuxing Middle Rd, Shanghai</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container news-bgimg p-t ">
+        <div class="row">
+            <h3 class="">
+                NEWS
+            </h3>
+            <div class="row bgc-white text-ct">
+                <p class="about-p text-blak bder-b-1px"><span class="news">NEWS</span> 2021/12/8 <br>
+                    THE WORLD’S 50 BEST BARSにて「The SG Club」が日本最高位の第18位を受賞！</p>
+                <p class="about-p text-blak bder-b-1px"><span class="news">NEWS</span> 2021/12/7 <br>
+                    DRiNK Awards 2021にて 後閑信吾が「Entrepreneurship Award」 Sober Companyが「High Volume Bar」をダブル受賞！！</p>
+                <p class="about-p text-blak bder-b-1px"><span class="media">MEDIA</span> 2021/11/1 <br>
+                    BRUTUSに「ゑすじ郎」が掲載されました</p>
+                <p class="about-p text-blak bder-b-1px"><span class="media">MEDIA</span> 2021/10/29 <br>
+                    Time Outに「swrl.」が掲載されました</p>
+                <p class="about-p text-blak bder-b-1px"><span class="media">MEDIA</span> 2021/10/20 <br>
+                    IGNITEに「swrl.」が掲載されました</p>
+            </div>
+            <h3 class="p-t p-b">
+                <button class="learnmore">LEARN MORE</button>
+            </h3>
+
+        </div>
+    </div>
+    <div class="container p-t">
+        <div class="row text-cen">
+            <h3 class="">
+                COMPANY
+            </h3>
+            <p class="about-p">株式会社SGマネジメント / SG Management Inc.</p>
+            <div class="about-p  COMPANY">
+                <p class="COMPANY-left bgc-ccc">本店</p>
+                <p class="COMPANY-right bgc-ccc">〒150-0041 東京都渋谷区神南1-7-8 豊産ビル</p>
+            </div>
+            <div class="about-p  COMPANY">
+                <p class="COMPANY-left ">オフィス</p>
+                <p class="COMPANY-right ">〒150-0041 東京都渋谷区神南1-9-4 NCビル</p>
+            </div>
+            <div class="about-p  COMPANY">
+                <p class="COMPANY-left bgc-ccc">電話番号</p>
+                <p class="COMPANY-right bgc-ccc">03-6455-2630</p>
+            </div>
+            <div class="about-p  COMPANY">
+                <p class="COMPANY-left ">代表取締役</p>
+                <p class="COMPANY-right ">勝山 聡</p>
+            </div>
+            <div class="about-p  COMPANY">
+                <div class="COMPANY-left bgc-ccc">取締役</div>
+                <div class="COMPANY-right bgc-ccc">後閑 信吾<br>
+                    松永 克生 <br>
+                    張 杰 <br>
+                    鈴木 敦 <br>
+                    土屋 麻鈴</div>
+            </div>
+            <div class="about-p  COMPANY">
+                <p class="COMPANY-left ">グループ会社・関連事業</p>
+                <p class="COMPANY-right">株式会社ファイブセンシス （東京）<br>
+                    株式会社スピークロー（東京）<br>
+                    株式会社ベルウッドエクスペリメント（東京）<br>
+                    上海后感餐饮管理有限公司（上海）<br>
+                    SG Management LLC. （ニューヨーク）<br>
+                    The SG Shochu（リカーブランド）</p>
+            </div>
+        </div>
+    </div>
+    <div class="container bgc-ccc p-t text-cen">
+        <div class="row">
+            <h3 class="">
+                COMPANY
+            </h3>
+            <div class="COMPANY p-b-20">
+                <p class="f-w-200 COMPANY-left-2">Name</p>
+                <p class="p-b-2 COMPANY-right-2"><input class="w-100 bder-5" type="text"></p>
+            </div>
+            <div class="COMPANY p-b-20">
+                <p class="f-w-200 COMPANY-left-2">Company（任意）</p>
+                <p class="p-b-2 COMPANY-right-2"><input class="w-100 bder-5" type="text"></p>
+            </div>
+            <div class="COMPANY p-b-20">
+                <p class="f-w-200 COMPANY-left-2">E-mail</p>
+                <p class="p-b-2 COMPANY-right-2"><input class="w-100 bder-5" type="text"></p>
+            </div>
+            <div class="COMPANY p-b-20">
+                <p class="f-w-200 COMPANY-left-2">Subject</p>
+                <p class="p-b-2 COMPANY-right-2"><input class="w-100 bder-5" type="text"></p>
+            </div>
+            <div class="COMPANY p-b-20">
+                <p class="f-w-200 COMPANY-left-2">Message</p>
+                <p class="p-b-20 COMPANY-right-2"><input class="w-100 hi-300 bder-6" type="text"></p>
+            </div>
+        </div>
+        <h3 class="p-t p-b">
+            <div class="sent">送信</div>
+        </h3>
+
+    </div>
+    <div class="text-cen footer">
+        <p>SG MANAGEMENT INC.</p>
+    </div>
+</body>
+
+</html>
